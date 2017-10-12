@@ -1,20 +1,31 @@
 # Filebot Compiler
-Filebot Compiler is a simply script to compiler the last version of [Filebot](https://github.com/filebot/) (by rednoah).
+Filebot Compiler is a simply script to compiler the last version of [Filebot](https://github.com/filebot/) (by @rednoah).
 
 ## Content
 The script install all requirements (packages, dirs, compile-software, downloads latest repos...) to compile automatically the latest commit.
 
 ### Script Steps
-* Install Packages
-* Download Repos
-* Install Dependencies
-* Compile
+1. Install Packages
+2. Download Repos
+3. Install Dependencies
+4. Compile
 
 ## TODO
-[] Menu
-[] Trace log
+- [ ] Menu
+- [ ] Trace log
 
-## Script checked in:
+## Execute
+```
+chmod +x filebot-compiler.sh
+bash filebot-compiler.sh 
+```
+or
+```
+chmod +x filebot-compiler.sh
+./filebot-compiler.sh
+```
+
+### Script checked in:
 * Debian GNU/Linux 9.2 (stretch)
 * Ubuntu 16.04
 
