@@ -1,11 +1,8 @@
 #! /usr/bin/env bash
 
 # Name: Filebot Compiler
-# Description: Compile last commit Filebot project (by rednoah)
+# Description: Compile latest commit Filebot project (by rednoah)
 # Author: Ivan Alejandro Marugan (hello@ialejandro.rocks)
-#
-# TODO
-# [] Menu
 
 set -e -u
 
