@@ -57,7 +57,7 @@ install_packages() {
 	# Packages
 	PACKAGES="jq curl git ant"
 	for SOFT in $PACKAGES; do
-		EXISTS=$(which ${soft} >/dev/null; echo $?)
+		EXISTS=$(which ${SOFT} >/dev/null; echo $?)
 		if [[ ${EXISTS} != 0 ]]; then
 			echo "[${WARN}WARNING${NC}] ${SOFT} isn't installed. Installing..." 
 			apt-get -qq install ${SOFT} &>/dev/null
