@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/bash
 
 # Name: Filebot Compiler
 # Description: Compile latest commit Filebot project (by rednoah)
@@ -6,11 +6,6 @@
 
 set -e -u
 
-# USER WITH PRIVILEGES
-if [[ ${EUID} != 0 ]]; then
-	echo "[${ERR}ERROR${NC}] You need root privileges" 
-	exit 1
-fi
 
 # COLOR MESSAGES
 OK=$(tput setaf 2)
@@ -19,11 +14,11 @@ ERR=$(tput setaf 1)
 NC=$(tput sgr0)
 
 # VARS
-LOGDIR="/var/log/build_filebot"
+LOGDIR="${HOME}/build_log_filebot"
 LOGFILE="${LOGDIR}/filebot_$(date +%d_%m_%Y).log"
 
 # PARAMS
-APACHE_IVY_REPO="https://git-wip-us.apache.org/repos/asf/ant-ivy.git"
+APACHE_IVY_FILE="http://ant.apache.org/ivy/history/latest-milestone/samples/build.xml"
 APACHE_IVY_SOURCE="${HOME}/apache-ivy"
 FILEBOT_CONFIG="${HOME}/.filebot"
 FILEBOT_SOURCE="${HOME}/filebot"
@@ -35,7 +30,7 @@ SLF4J_API_VERSION="1.7.9"
 create_dirs() {
 	# Config dir
 	if [[ ! -d "${FILEBOT_CONFIG}" ]]; then
-		mkdir -p "$FILEBOT_CONFIG"
+		mkdir -p "${FILEBOT_CONFIG}"
 	fi
 
 	# Commits file persistence
@@ -51,16 +46,21 @@ create_dirs() {
 
 # Packages necessary to compile
 install_packages() {
+	PACKAGES="jq git curl ant"
+	# USER WITH PRIVILEGES
+	if [[ ${EUID} != 0 ]]; then
+		echo "[${WARN}WARNING${NC}] You need root privileges to update and install packages: ${PACKAGES}. Enter you password to continue:"
+	fi
+
 	# Update repositories
-	apt-get -q=2 update
+	su - root -c "apt-get -q=2 update"
 
 	# Packages
-	PACKAGES="jq curl git ant"
 	for SOFT in $PACKAGES; do
 		EXISTS=$(which ${SOFT} >/dev/null; echo $?)
 		if [[ ${EXISTS} != 0 ]]; then
 			echo "[${WARN}WARNING${NC}] ${SOFT} isn't installed. Installing..." 
-			apt-get -qq install ${SOFT} &>/dev/null
+			su - root -c "apt-get -qq install ${SOFT}" &>/dev/null
 		else
 			echo "[${OK}OK${NC}] ${SOFT} installed." 
 		fi
@@ -69,37 +69,34 @@ install_packages() {
 	# Java packages (OpenJDK and OpenJFX)
 	EXISTS=$(dpkg -l | grep openjdk-8-jdk >/dev/null; echo $?)
 	if [[ ${EXISTS} != 0 ]]; then
-		echo "[${WARN}WARNING${NC}] OpenJDK and OpenJFX aren't installed. Installing..." 
-		apt-get -qq install openjdk-8-jdk openjfx &>/dev/null
+		echo "[${WARN}WARNING${NC}] open-jdk and openjfx aren't installed. Installing..." 
+		su - root -c "apt-get -qq install openjdk-8-jdk openjfx" &>/dev/null
 	else
-		echo "[${OK}OK${NC}] OpenJDK and OpenJFX installed." 
+		echo "[${OK}OK${NC}] open-jdk and openjfx installed." 
 	fi
 
 	# Apache Ivy
 	EXISTS=$(ls /usr/share/ant/lib/ivy.jar &>/dev/null; echo $?)
 	if [[ ${EXISTS} != 0 ]]; then
-
-		# Download last Apache Ivy
-		if [[ -d "${APACHE_IVY_SOURCE}" ]]; then
-			echo "[${WARN}WARNING${NC}] Apache Ivy directory will remove, re-download and compile." 
-			rm -r "${APACHE_IVY_SOURCE}"
-		fi
-
-		# Apache Ivy compile	
-		echo "[${OK}OK${NC}] Compiling Apache Ivy..."
-		git clone -q ${APACHE_IVY_REPO} ${APACHE_IVY_SOURCE} 
+		# Download latest Apache Ivy
+		mkdir -p "${APACHE_IVY_SOURCE}"
+		echo "[${OK}OK${NC}] Download new changes in Apache Ivy repository..."
+		wget -qP "${APACHE_IVY_SOURCE}" "${APACHE_IVY_FILE}"
 		ant -S jar -buildfile "${APACHE_IVY_SOURCE}"
-		cp "${APACHE_IVY_SOURCE}/build/artifact/jars/ivy.jar" "/usr/share/ant/lib/"
-
-	else
-		echo "[${OK}OK${NC}] Apache Ivy installed." 
+		mv "${APACHE_IVY_SOURCE}/ivy.jar" "/usr/share/ant/lib/"
 	fi
 }
 
 # Download filebot repository
 download() {
-	echo "[${OK}OK${NC}] Download Filebot repository..." 
-	git clone -q ${FILEBOT_REPO} ${FILEBOT_SOURCE}
+	# Download repo or new changes
+	if [[ -d ${FILEBOT_SOURCE} ]]; then
+		echo "[${OK}OK${NC}] Download new changes in Filebot repository..." 
+		git --git-dir="${FILEBOT_SOURCE}/.git" pull -q ${FILEBOT_REPO}
+	else
+		echo "[${OK}OK${NC}] Download Filebot repository..." 
+		git clone -q ${FILEBOT_REPO} ${FILEBOT_SOURCE}
+	fi
 	
 	# Check download
 	if [[ ! -d ${FILEBOT_SOURCE} ]]; then
@@ -129,7 +126,7 @@ install_dependencies() {
 # Compile Filebot
 compile() {
 	COMMIT=$(echo ${1:0:7})
-	echo "[${OK}OK${NC}] Compile Filebot (${COMMIT}) starts..." 
+	echo "[${OK}OK${NC}] Compiling Filebot (${COMMIT})..." 
 
 	# Compile starts
 	ant -S -logfile ${LOGDIR}/apache_ant_$(date +%d_%m_%Y).log -buildfile "${FILEBOT_SOURCE}" &>/dev/null
@@ -140,11 +137,12 @@ compile() {
 		VERSION=$(java -jar "${FILEBOT_SOURCE}/dist/Filebot.jar" -version | awk '{ print $2 }')
 		mv "${FILEBOT_SOURCE}/dist/Filebot.jar" "${HOME}/Filebot_${VERSION}_(${COMMIT}).jar"
 
-		# Success
-		remove_dirs
+		# Success and clean Apache Ant build
+		ant clean -S -buildfile "${FILEBOT_SOURCE}"
 		summary "${HOME}/Filebot_${VERSION}_(${COMMIT}).jar" "${VERSION}" "${COMMIT}"
 	else
 		# Fail
+		ant clean -S -buildfile "${FILEBOT_SOURCE}"
 		summary 1
 	fi
 }
@@ -166,8 +164,6 @@ summary() {
 remove_dirs() {
 	echo "[${WARN}WARNING${NC}] Remove dir ${FILEBOT_SOURCE}..." 
 	rm -rf "${FILEBOT_SOURCE}"
-	echo "[${WARN}WARNING${NC}] Remove dir ${APACHE_IVY_SOURCE}..." 
-	rm -rf "${APACHE_IVY_SOURCE}"
 }
 
 ###################### MAIN
@@ -175,16 +171,17 @@ remove_dirs() {
 install_packages
 create_dirs
 
+NEW_REV=$(curl -s -H 'Accept: application/vnd.github.v3+json' ${FILEBOT_API}/commits | jq -r .[0].sha)
+LAST_REV=$(cat "${FILEBOT_CONFIG}/commits_versions")
+
 # Compile if last commit is different
-FILEBOT_LAST_COMMIT=$(curl -s -H 'Accept: application/vnd.github.v3+json' ${FILEBOT_API}/commits | jq -r .[0].sha)
-EXISTS=$(cat "${FILEBOT_CONFIG}/commits_versions" | grep ${FILEBOT_LAST_COMMIT} &>/dev/null; echo $?)
-if [[ $EXISTS != 0 ]]; then
+if [[ "${NEW_REV}" != "${LAST_REV}" ]]; then
 	download
 	install_dependencies
-	compile ${FILEBOT_LAST_COMMIT}
+	compile ${NEW_REV}
 
 	# Save commit version
-	echo "${FILEBOT_LAST_COMMIT}" > "$FILEBOT_CONFIG/commits_versions"
+	echo "${NEW_REV}" > "${FILEBOT_CONFIG}/commits_versions"
 else
-	echo "[${WARN}WARNING${NC}] This version exists."
+	echo "[${WARN}WARNING${NC}] This version has been compiled."
 fi
