@@ -5,7 +5,7 @@ Filebot Compiler is a simply script to compiler the latest version of [Filebot](
 The script installs all requirements (packages, dirs, compile-software, downloads latest repos...) to compile automatically the latest commit.
 
 ### Script Steps
-1. Install Packages
+1. Install Packages (root privileges)
 2. Download Repos
 3. Install Dependencies
 4. Compile
@@ -33,4 +33,4 @@ chmod +x filebot-compiler.sh
 If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks). The latest version will automatically appear.
 
 ## Contributing
-I would be happy to upgrade the code. You are free to collaborate and upgrade everything.
+I would be happy to upgrade the code. You are free to collaborate and upgrade everything. Thanks @sbr481 for you help.
