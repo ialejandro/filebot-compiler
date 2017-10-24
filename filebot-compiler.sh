@@ -82,8 +82,8 @@ install_packages() {
 		mkdir -p "${APACHE_IVY_SOURCE}"
 		echo "[${OK}OK${NC}] Download new changes in Apache Ivy repository..."
 		wget -qP "${APACHE_IVY_SOURCE}" "${APACHE_IVY_FILE}"
-		ant -S jar -buildfile "${APACHE_IVY_SOURCE}"
-		mv "${APACHE_IVY_SOURCE}/ivy.jar" "/usr/share/ant/lib/"
+		ant -S -buildfile "${APACHE_IVY_SOURCE}"
+		mv "${APACHE_IVY_SOURCE}/ivy/ivy.jar" "/usr/share/ant/lib/"
 	fi
 }
 
