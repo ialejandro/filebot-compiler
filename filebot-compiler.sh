@@ -67,13 +67,13 @@ install_packages() {
 	done
 
 	# Java packages (OpenJDK and OpenJFX)
-	EXISTS=$(dpkg -l | grep openjdk-8-jdk >/dev/null; echo $?)
-	if [[ ${EXISTS} != 0 ]]; then
-		echo "[${WARN}WARNING${NC}] open-jdk and openjfx aren't installed. Installing..." 
-		su - root -c "apt-get -qq install openjdk-8-jdk openjfx" &>/dev/null
-	else
-		echo "[${OK}OK${NC}] open-jdk and openjfx installed." 
-	fi
+	#EXISTS=$(dpkg -l | grep openjdk-8-jdk >/dev/null; echo $?)
+	#if [[ ${EXISTS} != 0 ]]; then
+	#	echo "[${WARN}WARNING${NC}] open-jdk and openjfx aren't installed. Installing..." 
+	#	su - root -c "apt-get -qq install openjdk-8-jdk openjfx" &>/dev/null
+	#else
+	#	echo "[${OK}OK${NC}] open-jdk and openjfx installed." 
+	#fi
 
 	# Apache Ivy
 	EXISTS=$(ls /usr/share/ant/lib/ivy.jar &>/dev/null; echo $?)
