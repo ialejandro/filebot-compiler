@@ -1,7 +1,7 @@
 # Filebot Compiler
 Filebot Compiler is a simply script to compiler the latest version of [Filebot](https://github.com/filebot/) (by [@rednoah](https://github.com/rednoah)). 
 
-'''Version''': 1.0.0
+**Version**: 1.0.0
 
 ## Content
 The script installs all requirements (packages, dirs, compile-software, downloads latest repos...) to compile automatically the latest commit.
