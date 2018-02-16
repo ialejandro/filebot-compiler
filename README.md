@@ -28,14 +28,14 @@ chmod +x filebot-compiler.sh
 * Ubuntu 16.04
 
 ## Dependences
-* jq: parser json
-* git: tool to download the repository
-* curl: to check the new commit
-* apache-ant: tool to compile Filebot
-* dirmngr: takes care of accessing the OpenPGP keyservers
-* oracle-java: libraries to compile Filebot (by [webupd8team-java](http://www.webupd8.org))
-* openjfx: libraries to compile Filebot
-* apache-ivy: to download the dependencies of Filebot build
+* **jq**: parser json
+* **git**: tool to download the repository
+* **curl**: to check the new commit
+* **apache-ant**: tool to compile Filebot
+* **dirmngr**: takes care of accessing the OpenPGP keyservers
+* **oracle-java**: libraries to compile Filebot (by [webupd8team-java](http://www.webupd8.org))
+* **openjfx**: libraries to compile Filebot
+* **apache-ivy**: to download the dependencies of Filebot build
 
 ## TODO
 - [ ] Menu
