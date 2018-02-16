@@ -42,7 +42,7 @@ chmod +x filebot-compiler.sh
 - [ ] Trace log
 
 ## Other information
-If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks) ('''ONLY WORKS WITH JAVA9'''). The latest version will automatically appear.
+If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks) (***ONLY WORKS WITH JAVA9***). The latest version will automatically appear.
 
 ## Contributing
 I would be happy to upgrade the code, you are free to collaborate and improve my code. Thanks [@sbr481](https://github.com/sbr481) for you help.
