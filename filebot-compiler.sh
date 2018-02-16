@@ -190,8 +190,8 @@ remove_dirs() {
 }
 
 ###################### MAIN
-install_packages
 create_dirs
+install_packages
 
 # Check proyect
 NEW_REV=$(curl -s -H 'Accept: application/vnd.github.v3+json' ${FILEBOT_API}/commits | jq -r .[0].sha)
