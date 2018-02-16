@@ -98,11 +98,14 @@ install_packages() {
 	# Apache Ivy
 	EXISTS=$(ls /usr/share/ant/lib/ivy.jar &>/dev/null; echo $?)
 	if [[ ${EXISTS} != 0 ]]; then
-		# Download latest Apache Ivy
+		# Directories and logfiles
 		mkdir -p "${APACHE_IVY_SOURCE}"
+		touch "${LOGDIR}/apache-ant-compile-ivy-$(date +%Y%m%d).log"
+
+		# Download latest Apache Ivy
 		echo "[${OK}OK${NC}] Download new changes in Apache Ivy repository..."
 		wget -qP "${APACHE_IVY_SOURCE}" "${APACHE_IVY_FILE}"
-		ant -S -d -v -buildfile "${APACHE_IVY_SOURCE}" -logfile ${LOGDIR}/apache-ant-copmpile-ivy-$(date +%Y%m%d).log
+		ant -S -d -v -buildfile "${APACHE_IVY_SOURCE}" -logfile ${LOGDIR}/apache-ant-compile-ivy-$(date +%Y%m%d).log
 		mv "${APACHE_IVY_SOURCE}/ivy/ivy.jar" "/usr/share/ant/lib/"
 	fi
 }
