@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.apache.ftpserver"
+		module="ftplet-api"
+		revision="1.0.6"
+		status="release"
+		publication="20110627154438"
+	>
+		<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0" />
+		<description homepage="http://mina.apache.org/ftpserver
+	">
+		Ftplets are, similar to servlets, an API to plug into the
+		request lifecycle of FtpServer. Ftplets are called on session connect
+		and disconnect as well as before and after each command within a user
+		session.
+		</description>
+		<m:properties__maven.compile.target>1.5</m:properties__maven.compile.target>
+		<m:properties__maven.compile.source>1.5</m:properties__maven.compile.source>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:properties__organization.logo>http://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0-alpha-3|null__maven-surefire-plugin__2.4.3|null__maven-eclipse-plugin__2.5.1|null__maven-release-plugin__2.0-beta-7|null__maven-remote-resources-plugin__1.0|null__maven-compiler-plugin__2.0.2|org.codehaus.mojo__rat-maven-plugin__1.0-alpha-3|null__maven-source-plugin__2.0.4|null__maven-idea-plugin__2.1|null__maven-jar-plugin__2.2|org.apache.maven.plugins__maven-war-plugin__2.0.2|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0-alpha-3|null__maven-surefire-plugin__2.4.3|null__maven-eclipse-plugin__2.5.1|null__maven-release-plugin__2.0-beta-7|null__maven-remote-resources-plugin__1.0|null__maven-compiler-plugin__2.0.2|org.codehaus.mojo__rat-maven-plugin__1.0-alpha-3|null__maven-source-plugin__2.0.4|null__maven-idea-plugin__2.1|null__maven-jar-plugin__2.2|org.apache.maven.plugins__maven-war-plugin__2.0.2|org.apache.felix__maven-bundle-plugin__2.3.4</m:maven.plugins>
+		<m:dependency.management__org.apache.ftpserver__ftplet-api__version>1.0.6</m:dependency.management__org.apache.ftpserver__ftplet-api__version>
+		<m:dependency.management__org.apache.ftpserver__ftpserver-core__version>1.0.6</m:dependency.management__org.apache.ftpserver__ftpserver-core__version>
+		<m:dependency.management__org.apache.mina__mina-core__version>2.0.4</m:dependency.management__org.apache.mina__mina-core__version>
+		<m:dependency.management__org.apache.mina__mina-core__exclusion_0>org.easymock__easymock</m:dependency.management__org.apache.mina__mina-core__exclusion_0>
+		<m:dependency.management__org.apache.mina__mina-core__exclusion_1>org.easymock__easymockclassextension</m:dependency.management__org.apache.mina__mina-core__exclusion_1>
+		<m:dependency.management__org.springframework__spring-context__version>2.5.5</m:dependency.management__org.springframework__spring-context__version>
+		<m:dependency.management__org.springframework__spring-context__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.springframework__spring-context__exclusion_0>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.5.2</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.slf4j__jcl-over-slf4j__version>1.5.2</m:dependency.management__org.slf4j__jcl-over-slf4j__version>
+		<m:dependency.management__junit__junit__version>3.8.2</m:dependency.management__junit__junit__version>
+		<m:dependency.management__commons-net__commons-net__version>2.0</m:dependency.management__commons-net__commons-net__version>
+		<m:dependency.management__org.slf4j__slf4j-log4j12__version>1.5.2</m:dependency.management__org.slf4j__slf4j-log4j12__version>
+		<m:dependency.management__log4j__log4j__version>1.2.14</m:dependency.management__log4j__log4j__version>
+		<m:dependency.management__commons-codec__commons-codec__version>1.3</m:dependency.management__commons-codec__commons-codec__version>
+		<m:dependency.management__hsqldb__hsqldb__version>1.8.0.7</m:dependency.management__hsqldb__hsqldb__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="ftplet-api" type="bundle" ext="jar" conf="master"/>
+		<artifact name="ftplet-api" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="ftplet-api" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="junit" name="junit" rev="3.8.2" force="true" conf="test->runtime(*),master(*)"/>
+		<override org="org.apache.ftpserver" module="ftplet-api" matcher="exact" rev="1.0.6"/>
+		<override org="org.apache.ftpserver" module="ftpserver-core" matcher="exact" rev="1.0.6"/>
+		<override org="org.apache.mina" module="mina-core" matcher="exact" rev="2.0.4"/>
+		<override org="org.springframework" module="spring-context" matcher="exact" rev="2.5.5"/>
+		<override org="org.slf4j" module="slf4j-api" matcher="exact" rev="1.5.2"/>
+		<override org="org.slf4j" module="jcl-over-slf4j" matcher="exact" rev="1.5.2"/>
+		<override org="junit" module="junit" matcher="exact" rev="3.8.2"/>
+		<override org="commons-net" module="commons-net" matcher="exact" rev="2.0"/>
+		<override org="org.slf4j" module="slf4j-log4j12" matcher="exact" rev="1.5.2"/>
+		<override org="log4j" module="log4j" matcher="exact" rev="1.2.14"/>
+		<override org="commons-codec" module="commons-codec" matcher="exact" rev="1.3"/>
+		<override org="hsqldb" module="hsqldb" matcher="exact" rev="1.8.0.7"/>
+	</dependencies>
+</ivy-module>

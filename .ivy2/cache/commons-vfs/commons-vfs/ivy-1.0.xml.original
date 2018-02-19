@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>commons-vfs</groupId>
+  <artifactId>commons-vfs</artifactId>
+  <name>Commons VFS</name>
+  <version>1.0</version>
+  <description>VFS is a Virtual File System library.</description>
+  <url>http://jakarta.apache.org/commons/vfs/</url>
+  <issueManagement>
+    <url>http://issues.apache.org/jira/</url>
+  </issueManagement>
+  <inceptionYear>2002</inceptionYear>
+  <mailingLists>
+    <mailingList>
+      <name>Commons Dev List</name>
+      <subscribe>commons-dev-subscribe@jakarta.apache.org</subscribe>
+      <unsubscribe>commons-dev-unsubscribe@jakarta.apache.org</unsubscribe>
+      <archive>http://mail-archives.apache.org/mod_mbox/jakarta-commons-dev/</archive>
+    </mailingList>
+    <mailingList>
+      <name>Commons User List</name>
+      <subscribe>commons-user-subscribe@jakarta.apache.org</subscribe>
+      <unsubscribe>commons-user-unsubscribe@jakarta.apache.org</unsubscribe>
+      <archive>http://mail-archives.apache.org/mod_mbox/jakarta-commons-user/</archive>
+    </mailingList>
+  </mailingLists>
+  <developers>
+    <developer>
+      <id>adammurdoch</id>
+      <name>Adam Murdoch</name>
+      <email>adammurdoch -at- apache.org</email>
+      <organization></organization>
+    </developer>
+    <developer>
+      <id>jstrachan</id>
+      <name>James Strachan</name>
+      <email>jstrachan -at- apache.org</email>
+      <organization>SpiritSoft, Inc.</organization>
+    </developer>
+    <developer>
+      <id>imario</id>
+      <name>Mario Ivankovits</name>
+      <email>imario -at- apache.org</email>
+      <organization>OPS EDV Gmbh</organization>
+    </developer>
+    <developer>
+      <id>rahul</id>
+      <name>Rahul Akolkar</name>
+      <email>rahul -at- apache.org</email>
+      <organization>Apache Software Foundation</organization>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Rami Ojares</name>
+      <email>rami.ojares -at- elisa.fi</email>
+    </contributor>
+    <contributor>
+      <name>Anthony Goubard</name>
+      <email>adagoubard -at- chello.nl</email>
+    </contributor>
+    <contributor>
+      <name>Christopher Ottley</name>
+      <email>xknight -at- users.sourceforge.net</email>
+    </contributor>
+  </contributors>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>/LICENSE.txt</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/jakarta/commons/proper/vfs/trunk</connection>
+    <url>http://svn.apache.org/viewvc</url>
+  </scm>
+  <organization>
+    <name>The Apache Software Foundation</name>
+    <url>http://jakarta.apache.org</url>
+  </organization>
+  <build>
+    <sourceDirectory>core/src/main/java</sourceDirectory>
+    <testSourceDirectory>core/src/test/java</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>core/src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <targetPath>META-INF</targetPath>
+        <directory>${basedir}</directory>
+        <includes>
+          <include>NOTICE.txt</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <includes>
+            <include>**/test/*TestCase.java</include>
+          </includes>
+          <excludes>
+            <exclude>**/test/Abstract*TestCase.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-xdoc-plugin</artifactId>
+        <version>1.9.2</version>
+        <configuration>
+          <comment>&lt;strong>Site&lt;/strong> - Only
+                  required for building the website/documentation.</comment>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.6.2</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>1.4.1</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.1</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.0</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+      <version>2.0.2</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.23</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>1.0.b2</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>oro</groupId>
+      <artifactId>oro</artifactId>
+      <version>2.0.8</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>default</id>
+      <name>Default Repository</name>
+      <url>file:///www/jakarta.apache.org/builds/jakarta-commons/vfs/</url>
+    </repository>
+    <site>
+      <id>default</id>
+      <name>Default Site</name>
+      <url>scp://people.apache.org/public_html/vfs-1.0/site</url>
+    </site>
+    <status>converted</status>
+  </distributionManagement>
+</project>

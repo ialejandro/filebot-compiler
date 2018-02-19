@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.apache.curator"
+		module="apache-curator"
+		revision="2.6.0"
+		status="release"
+		publication="20140708045949"
+	>
+		<license name="The Apache Software License, Version 2.0" url="file://${basedir}/LICENSE" />
+		<description homepage="http://curator.apache.org">
+		Curator is a set of Java libraries that make using Apache ZooKeeper much easier.
+		</description>
+		<m:properties__jersey-version>1.18.1</m:properties__jersey-version>
+		<m:properties__maven-install-plugin-version>2.5.1</m:properties__maven-install-plugin-version>
+		<m:properties__osgi.activator/>
+		<m:properties__maven-project-info-reports-plugin-version>2.7</m:properties__maven-project-info-reports-plugin-version>
+		<m:properties__maven-release-plugin-version>2.5</m:properties__maven-release-plugin-version>
+		<m:properties__maven-bundle-plugin-version>2.3.7</m:properties__maven-bundle-plugin-version>
+		<m:properties__apache-rat-plugin-version>0.10</m:properties__apache-rat-plugin-version>
+		<m:properties__jsr311-api-version>1.1.1</m:properties__jsr311-api-version>
+		<m:properties__maven-scm-publish-plugin-version>1.0</m:properties__maven-scm-publish-plugin-version>
+		<m:properties__osgi.private.package/>
+		<m:properties__resteasy-jaxrs-version>2.3.0.GA</m:properties__resteasy-jaxrs-version>
+		<m:properties__osgi.require.bundle/>
+		<m:properties__jetty-version>6.1.26</m:properties__jetty-version>
+		<m:properties__zookeeper-version>3.4.6</m:properties__zookeeper-version>
+		<m:properties__guava-version>16.0.1</m:properties__guava-version>
+		<m:properties__project.build.resourceEncoding>UTF-8</m:properties__project.build.resourceEncoding>
+		<m:properties__maven-dependency-plugin-version>2.8</m:properties__maven-dependency-plugin-version>
+		<m:properties__swift-version>0.12.0</m:properties__swift-version>
+		<m:properties__osgi.import.package/>
+		<m:properties__maven-javadoc-plugin-version>2.9.1</m:properties__maven-javadoc-plugin-version>
+		<m:properties__osgi.export.package/>
+		<m:properties__testng-version>6.8.8</m:properties__testng-version>
+		<m:properties__maven-shade-plugin-version>2.3</m:properties__maven-shade-plugin-version>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__commons-math-version>2.2</m:properties__commons-math-version>
+		<m:properties__dropwizard-version>0.7.0</m:properties__dropwizard-version>
+		<m:properties__javassist-version>3.18.1-GA</m:properties__javassist-version>
+		<m:properties__jackson-mapper-asl-version>1.9.13</m:properties__jackson-mapper-asl-version>
+		<m:properties__osgi.export.service/>
+		<m:properties__osgi.dynamic.import/>
+		<m:properties__maven-compiler-plugin-version>3.1</m:properties__maven-compiler-plugin-version>
+		<m:properties__scannotation-version>1.0.2</m:properties__scannotation-version>
+		<m:properties__project.reporting.outputEncoding>UTF-8</m:properties__project.reporting.outputEncoding>
+		<m:properties__maven-license-plugin-version>1.9.0</m:properties__maven-license-plugin-version>
+		<m:properties__maven-surefire-plugin-version>2.17</m:properties__maven-surefire-plugin-version>
+		<m:properties__jdk-version>1.6</m:properties__jdk-version>
+		<m:properties__maven-site-plugin-version>3.3</m:properties__maven-site-plugin-version>
+		<m:properties__doxia-module-confluence-version>1.5</m:properties__doxia-module-confluence-version>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__gpg.useagent>true</m:properties__gpg.useagent>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__arguments/>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:properties__organization.logo>http://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-dependency-plugin__null|org.apache.maven.plugins__maven-install-plugin__null|org.apache.maven.plugins__maven-compiler-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.apache.maven.plugins__maven-javadoc-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-scm-publish-plugin__null|com.mycila.maven-license-plugin__maven-license-plugin__null|org.apache.maven.plugins__maven-release-plugin__null|org.apache.rat__apache-rat-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.6</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.mockito__mockito-core__version>1.9.5</m:dependency.management__org.mockito__mockito-core__version>
+		<m:dependency.management__org.apache.curator__curator-client__version>2.6.0</m:dependency.management__org.apache.curator__curator-client__version>
+		<m:dependency.management__org.apache.curator__curator-framework__version>2.6.0</m:dependency.management__org.apache.curator__curator-framework__version>
+		<m:dependency.management__org.apache.curator__curator-recipes__version>2.6.0</m:dependency.management__org.apache.curator__curator-recipes__version>
+		<m:dependency.management__org.apache.curator__curator-test__version>2.6.0</m:dependency.management__org.apache.curator__curator-test__version>
+		<m:dependency.management__org.apache.curator__curator-x-discovery__version>2.6.0</m:dependency.management__org.apache.curator__curator-x-discovery__version>
+		<m:dependency.management__org.apache.curator__curator-x-discovery-server__version>2.6.0</m:dependency.management__org.apache.curator__curator-x-discovery-server__version>
+		<m:dependency.management__org.javassist__javassist__version>3.18.1-GA</m:dependency.management__org.javassist__javassist__version>
+		<m:dependency.management__org.apache.commons__commons-math__version>2.2</m:dependency.management__org.apache.commons__commons-math__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>
+		<m:dependency.management__com.sun.jersey__jersey-server__version>1.18.1</m:dependency.management__com.sun.jersey__jersey-server__version>
+		<m:dependency.management__com.sun.jersey__jersey-servlet__version>1.18.1</m:dependency.management__com.sun.jersey__jersey-servlet__version>
+		<m:dependency.management__com.sun.jersey__jersey-client__version>1.18.1</m:dependency.management__com.sun.jersey__jersey-client__version>
+		<m:dependency.management__com.sun.jersey__jersey-core__version>1.18.1</m:dependency.management__com.sun.jersey__jersey-core__version>
+		<m:dependency.management__javax.ws.rs__jsr311-api__version>1.1.1</m:dependency.management__javax.ws.rs__jsr311-api__version>
+		<m:dependency.management__org.mortbay.jetty__jetty__version>6.1.26</m:dependency.management__org.mortbay.jetty__jetty__version>
+		<m:dependency.management__net.sf.scannotation__scannotation__version>1.0.2</m:dependency.management__net.sf.scannotation__scannotation__version>
+		<m:dependency.management__org.jboss.resteasy__resteasy-jaxrs__version>2.3.0.GA</m:dependency.management__org.jboss.resteasy__resteasy-jaxrs__version>
+		<m:dependency.management__org.jboss.resteasy__resteasy-jaxrs__exclusion_0>org.scannotation__scannotation</m:dependency.management__org.jboss.resteasy__resteasy-jaxrs__exclusion_0>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__version>3.4.6</m:dependency.management__org.apache.zookeeper__zookeeper__version>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>com.sun.jmx__jmxri</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_1>com.sun.jdmk__jmxtools</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_1>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_2>javax.jms__jms</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_2>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_3>junit__junit</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_3>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_4>org.slf4j__slf4j-log4j12</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_4>
+		<m:dependency.management__com.google.guava__guava__version>16.0.1</m:dependency.management__com.google.guava__guava__version>
+		<m:dependency.management__org.testng__testng__version>6.8.8</m:dependency.management__org.testng__testng__version>
+		<m:dependency.management__com.facebook.swift__swift-codec__version>0.12.0</m:dependency.management__com.facebook.swift__swift-codec__version>
+		<m:dependency.management__com.facebook.swift__swift-service__version>0.12.0</m:dependency.management__com.facebook.swift__swift-service__version>
+		<m:dependency.management__io.dropwizard__dropwizard-configuration__version>0.7.0</m:dependency.management__io.dropwizard__dropwizard-configuration__version>
+		<m:dependency.management__io.dropwizard__dropwizard-logging__version>0.7.0</m:dependency.management__io.dropwizard__dropwizard-logging__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+	</publications>
+	<dependencies>
+		<dependency org="org.apache.zookeeper" name="zookeeper" rev="3.4.6" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="com.sun.jmx" module="jmxri" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="com.sun.jdmk" module="jmxtools" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.jms" module="jms" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="junit" module="junit" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.slf4j" module="slf4j-log4j12" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.google.guava" name="guava" rev="16.0.1" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.testng" name="testng" rev="6.8.8" force="true" conf="test->runtime(*),master(*)"/>
+		<override org="org.slf4j" module="slf4j-api" matcher="exact" rev="1.7.6"/>
+		<override org="org.mockito" module="mockito-core" matcher="exact" rev="1.9.5"/>
+		<override org="org.apache.curator" module="curator-client" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-framework" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-recipes" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-test" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-x-discovery" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-x-discovery-server" matcher="exact" rev="2.6.0"/>
+		<override org="org.javassist" module="javassist" matcher="exact" rev="3.18.1-GA"/>
+		<override org="org.apache.commons" module="commons-math" matcher="exact" rev="2.2"/>
+		<override org="org.codehaus.jackson" module="jackson-mapper-asl" matcher="exact" rev="1.9.13"/>
+		<override org="com.sun.jersey" module="jersey-server" matcher="exact" rev="1.18.1"/>
+		<override org="com.sun.jersey" module="jersey-servlet" matcher="exact" rev="1.18.1"/>
+		<override org="com.sun.jersey" module="jersey-client" matcher="exact" rev="1.18.1"/>
+		<override org="com.sun.jersey" module="jersey-core" matcher="exact" rev="1.18.1"/>
+		<override org="javax.ws.rs" module="jsr311-api" matcher="exact" rev="1.1.1"/>
+		<override org="org.mortbay.jetty" module="jetty" matcher="exact" rev="6.1.26"/>
+		<override org="net.sf.scannotation" module="scannotation" matcher="exact" rev="1.0.2"/>
+		<override org="org.jboss.resteasy" module="resteasy-jaxrs" matcher="exact" rev="2.3.0.GA"/>
+		<override org="org.apache.zookeeper" module="zookeeper" matcher="exact" rev="3.4.6"/>
+		<override org="com.google.guava" module="guava" matcher="exact" rev="16.0.1"/>
+		<override org="org.testng" module="testng" matcher="exact" rev="6.8.8"/>
+		<override org="com.facebook.swift" module="swift-codec" matcher="exact" rev="0.12.0"/>
+		<override org="com.facebook.swift" module="swift-service" matcher="exact" rev="0.12.0"/>
+		<override org="io.dropwizard" module="dropwizard-configuration" matcher="exact" rev="0.7.0"/>
+		<override org="io.dropwizard" module="dropwizard-logging" matcher="exact" rev="0.7.0"/>
+	</dependencies>
+</ivy-module>

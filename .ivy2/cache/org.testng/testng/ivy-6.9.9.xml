@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.testng"
+		module="testng"
+		revision="6.9.9"
+		status="release"
+		publication="20151026200850"
+	>
+		<license name="Apache  Version 2.0, January 2004" />
+		<description homepage="http://github.com/cbeust/testng">
+		Testing framework for Java
+		</description>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="testng" type="jar" ext="jar" conf="master"/>
+		<artifact name="testng" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="testng" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="junit" name="junit" rev="4.10" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="com.beust" name="jcommander" rev="1.48" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.apache.ant" name="ant" rev="1.7.0" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.assertj" name="assertj-core" rev="2.0.0" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="com.google.inject" name="guice" rev="4.0" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)">
+			<artifact name="guice" type="jar" ext="jar" conf="" m:classifier="no_aop"/>
+		</dependency>
+		<dependency org="org.yaml" name="snakeyaml" rev="1.15" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.beanshell" name="bsh" rev="2.0b4" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+	</dependencies>
+</ivy-module>

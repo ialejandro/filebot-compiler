@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.controlsfx</groupId>
+  <artifactId>controlsfx</artifactId>
+  <version>8.40.13</version>
+  <name>ControlsFX</name>
+  <description>High quality UI controls and other tools to complement the core JavaFX distribution</description>
+  <url>http://www.controlsfx.org/</url>
+  <licenses>
+    <license>
+      <name>The 3-Clause BSD License</name>
+      <url>http://www.opensource.org/licenses/bsd-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Jonathan Giles</name>
+      <email>jonathan@jonathangiles.net</email>
+      <roles>
+        <role>author</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:hg:https://bitbucket.org/controlsfx/controlsfx</connection>
+    <developerConnection>scm:hg:ssh://hg@bitbucket.org/controlsfx/controlsfx</developerConnection>
+    <url>https://bitbucket.org/controlsfx/controlsfx</url>
+  </scm>
+  <properties>
+    <project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>[4,)</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

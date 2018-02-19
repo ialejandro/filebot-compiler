@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.apache.avro"
+		module="avro"
+		revision="1.7.4"
+		status="release"
+		publication="20130222185907"
+	>
+		<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="http://avro.apache.org">
+		Avro core components
+		</description>
+		<m:properties__netty.version>3.4.0.Final</m:properties__netty.version>
+		<m:properties__jetty.version>6.1.26</m:properties__jetty.version>
+		<m:properties__jackson.version>1.8.8</m:properties__jackson.version>
+		<m:properties__snappy.version>1.0.4.1</m:properties__snappy.version>
+		<m:properties__hamcrest.version>1.1</m:properties__hamcrest.version>
+		<m:properties__compiler-plugin.version>2.3.2</m:properties__compiler-plugin.version>
+		<m:properties__easymock.version>3.0</m:properties__easymock.version>
+		<m:properties__archetype-plugin.version>2.2</m:properties__archetype-plugin.version>
+		<m:properties__jar-plugin.version>2.3.2</m:properties__jar-plugin.version>
+		<m:properties__javacc-plugin.version>2.6</m:properties__javacc-plugin.version>
+		<m:properties__commons-httpclient.version>3.1</m:properties__commons-httpclient.version>
+		<m:properties__surefire-plugin.version>2.12</m:properties__surefire-plugin.version>
+		<m:properties__slf4j.version>1.6.4</m:properties__slf4j.version>
+		<m:properties__plugin-plugin.version>2.9</m:properties__plugin-plugin.version>
+		<m:properties__exec-plugin.version>1.2.1</m:properties__exec-plugin.version>
+		<m:properties__protobuf.version>2.4.1</m:properties__protobuf.version>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__jetty-servlet-api.version>2.5-20081211</m:properties__jetty-servlet-api.version>
+		<m:properties__junit.version>4.10</m:properties__junit.version>
+		<m:properties__file-management.version>1.2.1</m:properties__file-management.version>
+		<m:properties__shade-plugin.version>1.5</m:properties__shade-plugin.version>
+		<m:properties__jopt-simple.version>4.1</m:properties__jopt-simple.version>
+		<m:properties__checkstyle-plugin.version>2.8</m:properties__checkstyle-plugin.version>
+		<m:properties__hadoop2.version>2.0.1-alpha</m:properties__hadoop2.version>
+		<m:properties__maven.version>2.0.10</m:properties__maven.version>
+		<m:properties__hadoop1.version>0.20.205.0</m:properties__hadoop1.version>
+		<m:properties__commons-compress.version>1.4.1</m:properties__commons-compress.version>
+		<m:properties__commons-lang.version>2.6</m:properties__commons-lang.version>
+		<m:properties__thrift.version>0.7.0</m:properties__thrift.version>
+		<m:properties__ant.version>1.8.2</m:properties__ant.version>
+		<m:properties__source-plugin.version>2.1.2</m:properties__source-plugin.version>
+		<m:properties__javadoc-plugin.version>2.8</m:properties__javadoc-plugin.version>
+		<m:properties__paranamer.version>2.3</m:properties__paranamer.version>
+		<m:properties__velocity.version>1.7</m:properties__velocity.version>
+		<m:properties__maven-site-plugin.version>3.1</m:properties__maven-site-plugin.version>
+		<m:properties__apache-rat-tasks.version>0.7</m:properties__apache-rat-tasks.version>
+		<m:properties__antrun-plugin.version>1.7</m:properties__antrun-plugin.version>
+		<m:properties__avro.docDir>build/avro-doc-${project.version}/api</m:properties__avro.docDir>
+		<m:properties__enforcer-plugin.version>1.0.1</m:properties__enforcer-plugin.version>
+		<m:properties__avro.distDir>dist</m:properties__avro.distDir>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__gpg.useagent>true</m:properties__gpg.useagent>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:properties__organization.logo>http://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0.1|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0.1|org.apache.maven.plugins__maven-checkstyle-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0.1|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0.1|org.apache.maven.plugins__maven-checkstyle-plugin__null|com.thoughtworks.paranamer__paranamer-maven-plugin__2.3|org.apache.maven.plugins__maven-jar-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>1.8.8</m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>1.8.8</m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>
+		<m:dependency.management__com.thoughtworks.paranamer__paranamer__version>2.3</m:dependency.management__com.thoughtworks.paranamer__paranamer__version>
+		<m:dependency.management__org.apache.velocity__velocity__version>1.7</m:dependency.management__org.apache.velocity__velocity__version>
+		<m:dependency.management__org.mortbay.jetty__jetty__version>6.1.26</m:dependency.management__org.mortbay.jetty__jetty__version>
+		<m:dependency.management__io.netty__netty__version>3.4.0.Final</m:dependency.management__io.netty__netty__version>
+		<m:dependency.management__net.sf.jopt-simple__jopt-simple__version>4.1</m:dependency.management__net.sf.jopt-simple__jopt-simple__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-core__version>0.20.205.0</m:dependency.management__org.apache.hadoop__hadoop-core__version>
+		<m:dependency.management__org.xerial.snappy__snappy-java__version>1.0.4.1</m:dependency.management__org.xerial.snappy__snappy-java__version>
+		<m:dependency.management__org.apache.commons__commons-compress__version>1.4.1</m:dependency.management__org.apache.commons__commons-compress__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="avro" type="jar" ext="jar" conf="master"/>
+		<artifact name="avro" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="avro" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="1.8.8" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.codehaus.jackson" name="jackson-mapper-asl" rev="1.8.8" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="com.thoughtworks.paranamer" name="paranamer" rev="2.3" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.xerial.snappy" name="snappy-java" rev="1.0.4.1" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.apache.commons" name="commons-compress" rev="1.4.1" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="junit" name="junit-dep" rev="4.10" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.6.4" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.slf4j" name="slf4j-simple" rev="1.6.4" force="true" conf="optional->compile(*),provided(*),master(*)"/>
+		<override org="org.codehaus.jackson" module="jackson-core-asl" matcher="exact" rev="1.8.8"/>
+		<override org="org.codehaus.jackson" module="jackson-mapper-asl" matcher="exact" rev="1.8.8"/>
+		<override org="com.thoughtworks.paranamer" module="paranamer" matcher="exact" rev="2.3"/>
+		<override org="org.apache.velocity" module="velocity" matcher="exact" rev="1.7"/>
+		<override org="org.mortbay.jetty" module="jetty" matcher="exact" rev="6.1.26"/>
+		<override org="io.netty" module="netty" matcher="exact" rev="3.4.0.Final"/>
+		<override org="net.sf.jopt-simple" module="jopt-simple" matcher="exact" rev="4.1"/>
+		<override org="org.apache.hadoop" module="hadoop-core" matcher="exact" rev="0.20.205.0"/>
+		<override org="org.xerial.snappy" module="snappy-java" matcher="exact" rev="1.0.4.1"/>
+		<override org="org.apache.commons" module="commons-compress" matcher="exact" rev="1.4.1"/>
+	</dependencies>
+</ivy-module>

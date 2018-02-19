@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.apache.directory.server"
+		module="apacheds-i18n"
+		revision="2.0.0-M15"
+		status="release"
+		publication="20130814165100"
+	>
+		<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="">
+		Internationalization of errors and other messages
+		</description>
+		<m:properties__org.apache.directory.jdbm.version>2.0.0-M2</m:properties__org.apache.directory.jdbm.version>
+		<m:properties__jetty.version>6.1.14</m:properties__jetty.version>
+		<m:properties__distMgmtSiteUrl>scpexe://people.apache.org/www/directory.apache.org/apacheds/gen-docs/${project.version}/</m:properties__distMgmtSiteUrl>
+		<m:properties__maven.project.version>3.0-alpha-2</m:properties__maven.project.version>
+		<m:properties__commons.pool.version>1.6</m:properties__commons.pool.version>
+		<m:properties__org.apache.directory.checkstyle-configuration.version>0.1</m:properties__org.apache.directory.checkstyle-configuration.version>
+		<m:properties__maven.archiver.version>2.5</m:properties__maven.archiver.version>
+		<m:properties__maven.artifact.version>3.0.5</m:properties__maven.artifact.version>
+		<m:properties__log4j.version>1.2.17</m:properties__log4j.version>
+		<m:properties__junit.version>4.11</m:properties__junit.version>
+		<m:properties__org.apache.directory.api.version>1.0.0-M20</m:properties__org.apache.directory.api.version>
+		<m:properties__ldapsdk.version>4.1</m:properties__ldapsdk.version>
+		<m:properties__org.apache.directory.junit.junit-addons.version>0.1</m:properties__org.apache.directory.junit.junit-addons.version>
+		<m:properties__bcprov.version>140</m:properties__bcprov.version>
+		<m:properties__commons.collections.version>3.2.1</m:properties__commons.collections.version>
+		<m:properties__slf4j.log4j12.version>1.7.5</m:properties__slf4j.log4j12.version>
+		<m:properties__commons.lang.version>2.6</m:properties__commons.lang.version>
+		<m:properties__findbugs.annotations.version>1.0.0</m:properties__findbugs.annotations.version>
+		<m:properties__commons.daemon.version>1.0.15</m:properties__commons.daemon.version>
+		<m:properties__commons.cli.version>1.2</m:properties__commons.cli.version>
+		<m:properties__skin.version>1.0.2</m:properties__skin.version>
+		<m:properties__ehcache.version>2.4.4</m:properties__ehcache.version>
+		<m:properties__wrapper.version>3.2.3</m:properties__wrapper.version>
+		<m:properties__ant.version>1.9.1</m:properties__ant.version>
+		<m:properties__dnsjava.version>2.1.1</m:properties__dnsjava.version>
+		<m:properties__maven.plugin.api.version>3.0.5</m:properties__maven.plugin.api.version>
+		<m:properties__commons.net.version>3.3</m:properties__commons.net.version>
+		<m:properties__mina.core.version>2.0.7</m:properties__mina.core.version>
+		<m:properties__commons.io.version>2.4</m:properties__commons.io.version>
+		<m:properties__slf4j.api.version>1.7.5</m:properties__slf4j.api.version>
+		<m:properties__projectName>Apache Directory Server</m:properties__projectName>
+		<m:properties__plexus.utils.version>3.0.10</m:properties__plexus.utils.version>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__arguments/>
+		<m:properties__project.reporting.outputEncoding>UTF-8</m:properties__project.reporting.outputEncoding>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__gpg.useagent>true</m:properties__gpg.useagent>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:properties__organization.logo>http://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.geronimo.genesis.plugins__tools-maven-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.geronimo.genesis.plugins__tools-maven-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.geronimo.genesis.plugins__tools-maven-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.geronimo.genesis.plugins__tools-maven-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|org.apache.felix__maven-bundle-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.apache.directory.server__apacheds-all__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-all__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-benchmarks__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-benchmarks__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-annotations__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-annotations__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-api__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-api__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-avl__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-avl__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-constants__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-constants__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-integ__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-integ__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-jndi__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-jndi__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-core-shared__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-core-shared__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-default-config__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-default-config__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-http-integration__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-http-integration__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-i18n__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-i18n__version>
+		<m:dependency.management__org.apache.directory.jdbm__apacheds-jdbm1__version>2.0.0-M2</m:dependency.management__org.apache.directory.jdbm__apacheds-jdbm1__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-admin__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-admin__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-authn__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-authn__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-authz__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-authz__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-changelog__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-changelog__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-collective__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-collective__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-event__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-event__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-exception__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-exception__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-hash__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-hash__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-journal__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-journal__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptor-kerberos__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptor-kerberos__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-logger__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-logger__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-normalization__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-normalization__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-operational__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-operational__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-referral__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-referral__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-schema__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-schema__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-subtree__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-subtree__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-interceptors-trigger__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-interceptors-trigger__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-jdbm-partition__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-jdbm-partition__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-kerberos-shared__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-kerberos-shared__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-kerberos-codec__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-kerberos-codec__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-kerberos-test__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-kerberos-test__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-ldap-client-test__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-ldap-client-test__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-ldif-partition__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-ldif-partition__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-dhcp__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-dhcp__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-dns__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-dns__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-kerberos__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-kerberos__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-ldap__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-ldap__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-ntp__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-ntp__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-protocol-shared__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-protocol-shared__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-annotations__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-annotations__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-integ__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-integ__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-jndi__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-jndi__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-sar__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-sar__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-syncrepl__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-syncrepl__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-test-framework__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-test-framework__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-xdbm-partition__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-xdbm-partition__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-service__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-service__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-service-builder__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-service-builder__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-wrapper__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-wrapper__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-installers__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-installers__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-installers-maven-plugin__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-installers-maven-plugin__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-config__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-config__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-server-config-builder__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-server-config-builder__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-client-api__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-client-api__version>
+		<m:dependency.management__org.apache.directory.api__api-asn1-api__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-asn1-api__version>
+		<m:dependency.management__org.apache.directory.api__api-asn1-ber__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-asn1-ber__version>
+		<m:dependency.management__org.apache.directory.api__api-all__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-all__version>
+		<m:dependency.management__org.apache.directory.api__api-dsml-parser__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-dsml-parser__version>
+		<m:dependency.management__org.apache.directory.api__api-dsml-engine__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-dsml-engine__version>
+		<m:dependency.management__org.apache.directory.api__api-i18n__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-i18n__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-codec-core__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-codec-core__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-codec-standalone__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-codec-standalone__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-aci__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-aci__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-codec__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-codec__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-codec-api__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-codec-api__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-sp__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-sp__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-trigger__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-trigger__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-extras-util__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-extras-util__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-model__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-model__version>
+		<m:dependency.management__org.apache.directory.api__api-ldap-schema-data__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-ldap-schema-data__version>
+		<m:dependency.management__org.apache.directory.api__api-util__version>1.0.0-M20</m:dependency.management__org.apache.directory.api__api-util__version>
+		<m:dependency.management__org.apache.mina__mina-core__version>2.0.7</m:dependency.management__org.apache.mina__mina-core__version>
+		<m:dependency.management__commons-io__commons-io__version>2.4</m:dependency.management__commons-io__commons-io__version>
+		<m:dependency.management__commons-collections__commons-collections__version>3.2.1</m:dependency.management__commons-collections__commons-collections__version>
+		<m:dependency.management__commons-daemon__commons-daemon__version>1.0.15</m:dependency.management__commons-daemon__commons-daemon__version>
+		<m:dependency.management__commons-lang__commons-lang__version>2.6</m:dependency.management__commons-lang__commons-lang__version>
+		<m:dependency.management__commons-cli__commons-cli__version>1.2</m:dependency.management__commons-cli__commons-cli__version>
+		<m:dependency.management__commons-net__commons-net__version>3.3</m:dependency.management__commons-net__commons-net__version>
+		<m:dependency.management__commons-pool__commons-pool__version>1.6</m:dependency.management__commons-pool__commons-pool__version>
+		<m:dependency.management__org.apache.directory.junit__junit-addons__version>0.1</m:dependency.management__org.apache.directory.junit__junit-addons__version>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.5</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.slf4j__slf4j-log4j12__version>1.7.5</m:dependency.management__org.slf4j__slf4j-log4j12__version>
+		<m:dependency.management__log4j__log4j__version>1.2.17</m:dependency.management__log4j__log4j__version>
+		<m:dependency.management__org.apache.ant__ant__version>1.9.1</m:dependency.management__org.apache.ant__ant__version>
+		<m:dependency.management__junit__junit__version>4.11</m:dependency.management__junit__junit__version>
+		<m:dependency.management__org.apache.maven__maven-plugin-api__version>3.0.5</m:dependency.management__org.apache.maven__maven-plugin-api__version>
+		<m:dependency.management__org.apache.maven__maven-project__version>3.0-alpha-2</m:dependency.management__org.apache.maven__maven-project__version>
+		<m:dependency.management__org.apache.maven__maven-archiver__version>2.5</m:dependency.management__org.apache.maven__maven-archiver__version>
+		<m:dependency.management__org.codehaus.plexus__plexus-utils__version>3.0.10</m:dependency.management__org.codehaus.plexus__plexus-utils__version>
+		<m:dependency.management__org.apache.maven__maven-artifact__version>3.0.5</m:dependency.management__org.apache.maven__maven-artifact__version>
+		<m:dependency.management__ldapsdk__ldapsdk__version>4.1</m:dependency.management__ldapsdk__ldapsdk__version>
+		<m:dependency.management__dnsjava__dnsjava__version>2.1.1</m:dependency.management__dnsjava__dnsjava__version>
+		<m:dependency.management__tanukisoft__wrapper__version>3.2.3</m:dependency.management__tanukisoft__wrapper__version>
+		<m:dependency.management__bouncycastle__bcprov-jdk15__version>140</m:dependency.management__bouncycastle__bcprov-jdk15__version>
+		<m:dependency.management__org.mortbay.jetty__jetty__version>6.1.14</m:dependency.management__org.mortbay.jetty__jetty__version>
+		<m:dependency.management__org.mortbay.jetty__servlet-api-2.5__version>6.1.14</m:dependency.management__org.mortbay.jetty__servlet-api-2.5__version>
+		<m:dependency.management__org.mortbay.jetty__jetty-util__version>6.1.14</m:dependency.management__org.mortbay.jetty__jetty-util__version>
+		<m:dependency.management__findbugs__annotations__version>1.0.0</m:dependency.management__findbugs__annotations__version>
+		<m:dependency.management__net.sf.ehcache__ehcache-core__version>2.4.4</m:dependency.management__net.sf.ehcache__ehcache-core__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="apacheds-i18n" type="bundle" ext="jar" conf="master"/>
+		<artifact name="apacheds-i18n" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="apacheds-i18n" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="findbugs" name="annotations" rev="1.0.0" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.5" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="junit" name="junit" rev="4.11" force="true" conf="test->runtime(*),master(*)"/>
+		<override org="org.apache.directory.server" module="apacheds-all" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-benchmarks" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-annotations" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-api" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-avl" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-constants" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-integ" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-jndi" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-core-shared" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-default-config" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-http-integration" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-i18n" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.jdbm" module="apacheds-jdbm1" matcher="exact" rev="2.0.0-M2"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-admin" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-authn" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-authz" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-changelog" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-collective" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-event" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-exception" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-hash" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-journal" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptor-kerberos" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-logger" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-normalization" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-operational" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-referral" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-schema" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-subtree" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-interceptors-trigger" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-jdbm-partition" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-kerberos-shared" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-kerberos-codec" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-kerberos-test" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-ldap-client-test" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-ldif-partition" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-dhcp" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-dns" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-kerberos" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-ldap" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-ntp" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-protocol-shared" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-annotations" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-integ" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-jndi" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-sar" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-syncrepl" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-test-framework" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-xdbm-partition" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-service" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-service-builder" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-wrapper" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-installers" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-installers-maven-plugin" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-config" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.server" module="apacheds-server-config-builder" matcher="exact" rev="2.0.0-M15"/>
+		<override org="org.apache.directory.api" module="api-ldap-client-api" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-asn1-api" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-asn1-ber" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-all" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-dsml-parser" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-dsml-engine" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-i18n" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-codec-core" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-codec-standalone" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-aci" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-codec" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-codec-api" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-sp" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-trigger" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-extras-util" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-model" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-ldap-schema-data" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.directory.api" module="api-util" matcher="exact" rev="1.0.0-M20"/>
+		<override org="org.apache.mina" module="mina-core" matcher="exact" rev="2.0.7"/>
+		<override org="commons-io" module="commons-io" matcher="exact" rev="2.4"/>
+		<override org="commons-collections" module="commons-collections" matcher="exact" rev="3.2.1"/>
+		<override org="commons-daemon" module="commons-daemon" matcher="exact" rev="1.0.15"/>
+		<override org="commons-lang" module="commons-lang" matcher="exact" rev="2.6"/>
+		<override org="commons-cli" module="commons-cli" matcher="exact" rev="1.2"/>
+		<override org="commons-net" module="commons-net" matcher="exact" rev="3.3"/>
+		<override org="commons-pool" module="commons-pool" matcher="exact" rev="1.6"/>
+		<override org="org.apache.directory.junit" module="junit-addons" matcher="exact" rev="0.1"/>
+		<override org="org.slf4j" module="slf4j-api" matcher="exact" rev="1.7.5"/>
+		<override org="org.slf4j" module="slf4j-log4j12" matcher="exact" rev="1.7.5"/>
+		<override org="log4j" module="log4j" matcher="exact" rev="1.2.17"/>
+		<override org="org.apache.ant" module="ant" matcher="exact" rev="1.9.1"/>
+		<override org="junit" module="junit" matcher="exact" rev="4.11"/>
+		<override org="org.apache.maven" module="maven-plugin-api" matcher="exact" rev="3.0.5"/>
+		<override org="org.apache.maven" module="maven-project" matcher="exact" rev="3.0-alpha-2"/>
+		<override org="org.apache.maven" module="maven-archiver" matcher="exact" rev="2.5"/>
+		<override org="org.codehaus.plexus" module="plexus-utils" matcher="exact" rev="3.0.10"/>
+		<override org="org.apache.maven" module="maven-artifact" matcher="exact" rev="3.0.5"/>
+		<override org="ldapsdk" module="ldapsdk" matcher="exact" rev="4.1"/>
+		<override org="dnsjava" module="dnsjava" matcher="exact" rev="2.1.1"/>
+		<override org="tanukisoft" module="wrapper" matcher="exact" rev="3.2.3"/>
+		<override org="bouncycastle" module="bcprov-jdk15" matcher="exact" rev="140"/>
+		<override org="org.mortbay.jetty" module="jetty" matcher="exact" rev="6.1.14"/>
+		<override org="org.mortbay.jetty" module="servlet-api-2.5" matcher="exact" rev="6.1.14"/>
+		<override org="org.mortbay.jetty" module="jetty-util" matcher="exact" rev="6.1.14"/>
+		<override org="findbugs" module="annotations" matcher="exact" rev="1.0.0"/>
+		<override org="net.sf.ehcache" module="ehcache-core" matcher="exact" rev="2.4.4"/>
+	</dependencies>
+</ivy-module>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.apache.hadoop"
+		module="hadoop-auth"
+		revision="2.6.0"
+		status="release"
+		publication="20141113233537"
+	>
+		<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="">
+		Apache Hadoop Auth - Java HTTP SPNEGO
+		</description>
+		<m:properties__maven.build.timestamp.format>yyyyMMdd</m:properties__maven.build.timestamp.format>
+		<m:properties__hadoop.assemblies.version>${project.version}</m:properties__hadoop.assemblies.version>
+		<m:properties__jersey.version>1.9</m:properties__jersey.version>
+		<m:properties__testsThreadCount>4</m:properties__testsThreadCount>
+		<m:properties__jackson2.version>2.2.3</m:properties__jackson2.version>
+		<m:properties__jackson.version>1.9.13</m:properties__jackson.version>
+		<m:properties__zookeeper.version>3.4.6</m:properties__zookeeper.version>
+		<m:properties__tomcat.version>6.0.41</m:properties__tomcat.version>
+		<m:properties__failIfNoTests>false</m:properties__failIfNoTests>
+		<m:properties__java.security.egd>file:///dev/urandom</m:properties__java.security.egd>
+		<m:properties__test.exclude>_</m:properties__test.exclude>
+		<m:properties__test.exclude.pattern>_</m:properties__test.exclude.pattern>
+		<m:properties__commons-daemon.version>1.0.13</m:properties__commons-daemon.version>
+		<m:properties__test.build.dir>${project.build.directory}/test-dir</m:properties__test.build.dir>
+		<m:properties__protoc.path>${env.HADOOP_PROTOC_PATH}</m:properties__protoc.path>
+		<m:properties__maven.test.redirectTestOutputToFile>true</m:properties__maven.test.redirectTestOutputToFile>
+		<m:properties__hadoop.common.build.dir>${basedir}/../../hadoop-common-project/hadoop-common/target</m:properties__hadoop.common.build.dir>
+		<m:properties__protobuf.version>2.5.0</m:properties__protobuf.version>
+		<m:properties__avro.version>1.7.4</m:properties__avro.version>
+		<m:properties__jdiff.version>1.0.9</m:properties__jdiff.version>
+		<m:properties__test.build.data>${test.build.dir}</m:properties__test.build.data>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__distMgmtStagingId>apache.staging.https</m:properties__distMgmtStagingId>
+		<m:properties__distMgmtStagingUrl>https://repository.apache.org/service/local/staging/deploy/maven2</m:properties__distMgmtStagingUrl>
+		<m:properties__distMgmtStagingName>Apache Release Distribution Repository</m:properties__distMgmtStagingName>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__project.reporting.outputEncoding>UTF-8</m:properties__project.reporting.outputEncoding>
+		<m:properties__distMgmtSnapshotsId>apache.snapshots.https</m:properties__distMgmtSnapshotsId>
+		<m:dependency.management__com.cenqua.clover__clover__version>3.0.2</m:dependency.management__com.cenqua.clover__clover__version>
+		<m:maven.plugins>org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__null|null__maven-site-plugin__3.3|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__null|null__maven-site-plugin__3.3|org.apache.felix__maven-bundle-plugin__null|org.codehaus.mojo__findbugs-maven-plugin__null|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.apache.maven.plugins__maven-pdf-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__null|null__maven-site-plugin__3.3|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__null|null__maven-site-plugin__3.3|org.apache.felix__maven-bundle-plugin__null|org.codehaus.mojo__findbugs-maven-plugin__null|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.apache.maven.plugins__maven-pdf-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|org.codehaus.mojo__findbugs-maven-plugin__null</m:maven.plugins>
+		<m:dependency.management__jdiff__jdiff__version>1.0.9</m:dependency.management__jdiff__jdiff__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-assemblies__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-assemblies__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-annotations__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-annotations__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-common__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-auth__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-auth__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-nfs__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-nfs__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-hdfs__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-hdfs__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-app__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-app__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-common__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-core__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-core__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-jobclient__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-jobclient__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-shuffle__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-shuffle__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-common__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-registry__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-registry__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-nodemanager__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-nodemanager__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-resourcemanager__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-resourcemanager__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-applications-distributedshell__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-applications-distributedshell__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-hs__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-client-hs__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-mapreduce-examples__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-mapreduce-examples__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-gridmix__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-gridmix__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-streaming__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-streaming__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-archives__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-archives__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-distcp__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-distcp__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-datajoin__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-datajoin__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-rumen__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-rumen__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-extras__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-extras__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-ant__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-ant__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-client__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-minicluster__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-minicluster__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-minikdc__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-minikdc__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-openstack__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-openstack__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-aws__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-aws__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-kms__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-kms__version>
+		<m:dependency.management__com.google.guava__guava__version>11.0.2</m:dependency.management__com.google.guava__guava__version>
+		<m:dependency.management__com.google.code.gson__gson__version>2.2.4</m:dependency.management__com.google.code.gson__gson__version>
+		<m:dependency.management__commons-cli__commons-cli__version>1.2</m:dependency.management__commons-cli__commons-cli__version>
+		<m:dependency.management__org.apache.commons__commons-math3__version>3.1.1</m:dependency.management__org.apache.commons__commons-math3__version>
+		<m:dependency.management__org.apache.commons__commons-compress__version>1.4.1</m:dependency.management__org.apache.commons__commons-compress__version>
+		<m:dependency.management__xmlenc__xmlenc__version>0.52</m:dependency.management__xmlenc__xmlenc__version>
+		<m:dependency.management__commons-httpclient__commons-httpclient__version>3.1</m:dependency.management__commons-httpclient__commons-httpclient__version>
+		<m:dependency.management__org.apache.httpcomponents__httpclient__version>4.2.5</m:dependency.management__org.apache.httpcomponents__httpclient__version>
+		<m:dependency.management__org.apache.httpcomponents__httpcore__version>4.2.5</m:dependency.management__org.apache.httpcomponents__httpcore__version>
+		<m:dependency.management__commons-codec__commons-codec__version>1.4</m:dependency.management__commons-codec__commons-codec__version>
+		<m:dependency.management__commons-net__commons-net__version>3.1</m:dependency.management__commons-net__commons-net__version>
+		<m:dependency.management__javax.servlet__servlet-api__version>2.5</m:dependency.management__javax.servlet__servlet-api__version>
+		<m:dependency.management__org.mortbay.jetty__jetty__version>6.1.26</m:dependency.management__org.mortbay.jetty__jetty__version>
+		<m:dependency.management__org.mortbay.jetty__jetty__exclusion_0>org.mortbay.jetty__servlet-api</m:dependency.management__org.mortbay.jetty__jetty__exclusion_0>
+		<m:dependency.management__org.mortbay.jetty__jetty-util__version>6.1.26</m:dependency.management__org.mortbay.jetty__jetty-util__version>
+		<m:dependency.management__org.apache.tomcat.embed__tomcat-embed-core__version>7.0.55</m:dependency.management__org.apache.tomcat.embed__tomcat-embed-core__version>
+		<m:dependency.management__org.apache.tomcat.embed__tomcat-embed-logging-juli__version>7.0.55</m:dependency.management__org.apache.tomcat.embed__tomcat-embed-logging-juli__version>
+		<m:dependency.management__javax.servlet.jsp__jsp-api__version>2.1</m:dependency.management__javax.servlet.jsp__jsp-api__version>
+		<m:dependency.management__org.glassfish__javax.servlet__version>3.1</m:dependency.management__org.glassfish__javax.servlet__version>
+		<m:dependency.management__org.codehaus.plexus__plexus-utils__version>2.0.5</m:dependency.management__org.codehaus.plexus__plexus-utils__version>
+		<m:dependency.management__org.codehaus.plexus__plexus-component-annotations__version>1.5.5</m:dependency.management__org.codehaus.plexus__plexus-component-annotations__version>
+		<m:dependency.management__asm__asm__version>3.2</m:dependency.management__asm__asm__version>
+		<m:dependency.management__com.sun.jersey__jersey-core__version>1.9</m:dependency.management__com.sun.jersey__jersey-core__version>
+		<m:dependency.management__com.sun.jersey__jersey-json__version>1.9</m:dependency.management__com.sun.jersey__jersey-json__version>
+		<m:dependency.management__com.sun.jersey__jersey-json__exclusion_0>stax__stax-api</m:dependency.management__com.sun.jersey__jersey-json__exclusion_0>
+		<m:dependency.management__com.sun.jersey__jersey-server__version>1.9</m:dependency.management__com.sun.jersey__jersey-server__version>
+		<m:dependency.management__com.google.inject__guice__version>3.0</m:dependency.management__com.google.inject__guice__version>
+		<m:dependency.management__cglib__cglib__version>2.2</m:dependency.management__cglib__cglib__version>
+		<m:dependency.management__com.google.inject.extensions__guice-servlet__version>3.0</m:dependency.management__com.google.inject.extensions__guice-servlet__version>
+		<m:dependency.management__com.sun.jersey.contribs__jersey-guice__version>1.9</m:dependency.management__com.sun.jersey.contribs__jersey-guice__version>
+		<m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-core__version>1.9</m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-core__version>
+		<m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-core__scope>test</m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-core__scope>
+		<m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-grizzly2__version>1.9</m:dependency.management__com.sun.jersey.jersey-test-framework__jersey-test-framework-grizzly2__version>
+		<m:dependency.management__io.netty__netty__version>3.6.2.Final</m:dependency.management__io.netty__netty__version>
+		<m:dependency.management__commons-io__commons-io__version>2.4</m:dependency.management__commons-io__commons-io__version>
+		<m:dependency.management__org.mortbay.jetty__jetty-servlet-tester__version>6.1.26</m:dependency.management__org.mortbay.jetty__jetty-servlet-tester__version>
+		<m:dependency.management__tomcat__jasper-compiler__version>5.5.23</m:dependency.management__tomcat__jasper-compiler__version>
+		<m:dependency.management__tomcat__jasper-compiler__exclusion_0>javax.servlet__jsp-api</m:dependency.management__tomcat__jasper-compiler__exclusion_0>
+		<m:dependency.management__tomcat__jasper-compiler__exclusion_1>ant__ant</m:dependency.management__tomcat__jasper-compiler__exclusion_1>
+		<m:dependency.management__tomcat__jasper-runtime__version>5.5.23</m:dependency.management__tomcat__jasper-runtime__version>
+		<m:dependency.management__commons-el__commons-el__version>1.0</m:dependency.management__commons-el__commons-el__version>
+		<m:dependency.management__commons-logging__commons-logging__version>1.1.3</m:dependency.management__commons-logging__commons-logging__version>
+		<m:dependency.management__commons-logging__commons-logging__exclusion_0>avalon-framework__avalon-framework</m:dependency.management__commons-logging__commons-logging__exclusion_0>
+		<m:dependency.management__commons-logging__commons-logging__exclusion_1>logkit__logkit</m:dependency.management__commons-logging__commons-logging__exclusion_1>
+		<m:dependency.management__commons-logging__commons-logging__exclusion_2>javax.servlet__servlet-api</m:dependency.management__commons-logging__commons-logging__exclusion_2>
+		<m:dependency.management__commons-logging__commons-logging-api__version>1.1</m:dependency.management__commons-logging__commons-logging-api__version>
+		<m:dependency.management__log4j__log4j__version>1.2.17</m:dependency.management__log4j__log4j__version>
+		<m:dependency.management__log4j__log4j__exclusion_0>com.sun.jdmk__jmxtools</m:dependency.management__log4j__log4j__exclusion_0>
+		<m:dependency.management__log4j__log4j__exclusion_1>com.sun.jmx__jmxri</m:dependency.management__log4j__log4j__exclusion_1>
+		<m:dependency.management__log4j__log4j__exclusion_2>javax.mail__mail</m:dependency.management__log4j__log4j__exclusion_2>
+		<m:dependency.management__log4j__log4j__exclusion_3>javax.jms__jmx</m:dependency.management__log4j__log4j__exclusion_3>
+		<m:dependency.management__log4j__log4j__exclusion_4>javax.jms__jms</m:dependency.management__log4j__log4j__exclusion_4>
+		<m:dependency.management__net.java.dev.jets3t__jets3t__version>0.9.0</m:dependency.management__net.java.dev.jets3t__jets3t__version>
+		<m:dependency.management__com.amazonaws__aws-java-sdk__version>1.7.4</m:dependency.management__com.amazonaws__aws-java-sdk__version>
+		<m:dependency.management__org.apache.mina__mina-core__version>2.0.0-M5</m:dependency.management__org.apache.mina__mina-core__version>
+		<m:dependency.management__org.apache.ftpserver__ftplet-api__version>1.0.0</m:dependency.management__org.apache.ftpserver__ftplet-api__version>
+		<m:dependency.management__org.apache.ftpserver__ftpserver-core__version>1.0.0</m:dependency.management__org.apache.ftpserver__ftpserver-core__version>
+		<m:dependency.management__org.apache.ftpserver__ftpserver-deprecated__version>1.0.0-M2</m:dependency.management__org.apache.ftpserver__ftpserver-deprecated__version>
+		<m:dependency.management__junit__junit__version>4.11</m:dependency.management__junit__junit__version>
+		<m:dependency.management__commons-lang__commons-lang__version>2.6</m:dependency.management__commons-lang__commons-lang__version>
+		<m:dependency.management__commons-collections__commons-collections__version>3.2.1</m:dependency.management__commons-collections__commons-collections__version>
+		<m:dependency.management__commons-configuration__commons-configuration__version>1.6</m:dependency.management__commons-configuration__commons-configuration__version>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.5</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.slf4j__slf4j-log4j12__version>1.7.5</m:dependency.management__org.slf4j__slf4j-log4j12__version>
+		<m:dependency.management__org.slf4j__jul-to-slf4j__version>1.7.5</m:dependency.management__org.slf4j__jul-to-slf4j__version>
+		<m:dependency.management__org.eclipse.jdt__core__version>3.1.1</m:dependency.management__org.eclipse.jdt__core__version>
+		<m:dependency.management__oro__oro__version>2.0.8</m:dependency.management__oro__oro__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-jaxrs__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-jaxrs__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-xc__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-xc__version>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-core__version>2.2.3</m:dependency.management__com.fasterxml.jackson.core__jackson-core__version>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>2.2.3</m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-annotations__version>2.2.3</m:dependency.management__com.fasterxml.jackson.core__jackson-annotations__version>
+		<m:dependency.management__org.mockito__mockito-all__version>1.8.5</m:dependency.management__org.mockito__mockito-all__version>
+		<m:dependency.management__org.apache.avro__avro__version>1.7.4</m:dependency.management__org.apache.avro__avro__version>
+		<m:dependency.management__net.sf.kosmosfs__kfs__version>0.3</m:dependency.management__net.sf.kosmosfs__kfs__version>
+		<m:dependency.management__org.apache.ant__ant__version>1.8.1</m:dependency.management__org.apache.ant__ant__version>
+		<m:dependency.management__com.google.protobuf__protobuf-java__version>2.5.0</m:dependency.management__com.google.protobuf__protobuf-java__version>
+		<m:dependency.management__commons-daemon__commons-daemon__version>1.0.13</m:dependency.management__commons-daemon__commons-daemon__version>
+		<m:dependency.management__com.jcraft__jsch__version>0.1.42</m:dependency.management__com.jcraft__jsch__version>
+		<m:dependency.management__org.htrace__htrace-core__version>3.0.4</m:dependency.management__org.htrace__htrace-core__version>
+		<m:dependency.management__org.jdom__jdom__version>1.1</m:dependency.management__org.jdom__jdom__version>
+		<m:dependency.management__com.googlecode.json-simple__json-simple__version>1.1</m:dependency.management__com.googlecode.json-simple__json-simple__version>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__version>3.4.6</m:dependency.management__org.apache.zookeeper__zookeeper__version>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>org.jboss.netty__netty</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_1>com.sun.jdmk__jmxtools</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_1>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_2>com.sun.jmx__jmxri</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_2>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_3>org.jboss.netty__netty</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_3>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__scope>test</m:dependency.management__org.apache.zookeeper__zookeeper__scope>
+		<m:dependency.management__org.apache.bookkeeper__bookkeeper-server__version>4.2.3</m:dependency.management__org.apache.bookkeeper__bookkeeper-server__version>
+		<m:dependency.management__org.apache.bookkeeper__bookkeeper-server__scope>compile</m:dependency.management__org.apache.bookkeeper__bookkeeper-server__scope>
+		<m:dependency.management__org.hsqldb__hsqldb__version>2.0.0</m:dependency.management__org.hsqldb__hsqldb__version>
+		<m:dependency.management__com.codahale.metrics__metrics-core__version>3.0.1</m:dependency.management__com.codahale.metrics__metrics-core__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-sls__version>2.6.0</m:dependency.management__org.apache.hadoop__hadoop-sls__version>
+		<m:dependency.management__com.google.code.findbugs__jsr305__version>1.3.9</m:dependency.management__com.google.code.findbugs__jsr305__version>
+		<m:dependency.management__javax.xml.bind__jaxb-api__version>2.2.2</m:dependency.management__javax.xml.bind__jaxb-api__version>
+		<m:dependency.management__org.codehaus.jettison__jettison__version>1.1</m:dependency.management__org.codehaus.jettison__jettison__version>
+		<m:dependency.management__org.codehaus.jettison__jettison__exclusion_0>stax__stax-api</m:dependency.management__org.codehaus.jettison__jettison__exclusion_0>
+		<m:dependency.management__com.sun.jersey__jersey-client__version>1.9</m:dependency.management__com.sun.jersey__jersey-client__version>
+		<m:dependency.management__org.glassfish.grizzly__grizzly-http-servlet__version>2.1.2</m:dependency.management__org.glassfish.grizzly__grizzly-http-servlet__version>
+		<m:dependency.management__org.fusesource.leveldbjni__leveldbjni-all__version>1.8</m:dependency.management__org.fusesource.leveldbjni__leveldbjni-all__version>
+		<m:dependency.management__org.apache.directory.server__apacheds-kerberos-codec__version>2.0.0-M15</m:dependency.management__org.apache.directory.server__apacheds-kerberos-codec__version>
+		<m:dependency.management__xerces__xercesImpl__version>2.9.1</m:dependency.management__xerces__xercesImpl__version>
+		<m:dependency.management__org.apache.curator__curator-framework__version>2.6.0</m:dependency.management__org.apache.curator__curator-framework__version>
+		<m:dependency.management__org.apache.curator__curator-test__version>2.6.0</m:dependency.management__org.apache.curator__curator-test__version>
+		<m:dependency.management__org.apache.curator__curator-recipes__version>2.6.0</m:dependency.management__org.apache.curator__curator-recipes__version>
+		<m:dependency.management__org.apache.curator__curator-client__version>2.6.0</m:dependency.management__org.apache.curator__curator-client__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="public" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="hadoop-auth" type="jar" ext="jar" conf="master"/>
+		<artifact name="hadoop-auth" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="hadoop-auth" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.apache.hadoop" name="hadoop-annotations" rev="2.6.0" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)"/>
+		<dependency org="junit" name="junit" rev="4.11" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.mockito" name="mockito-all" rev="1.8.5" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.26" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.26" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.mortbay.jetty" name="jetty" rev="6.1.26" force="true" conf="test->runtime(*),master(*)">
+			<exclude org="org.mortbay.jetty" module="servlet-api" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.tomcat.embed" name="tomcat-embed-core" rev="7.0.55" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.apache.tomcat.embed" name="tomcat-embed-logging-juli" rev="7.0.55" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="javax.servlet" name="servlet-api" rev="2.5" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="commons-codec" name="commons-codec" rev="1.4" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="log4j" name="log4j" rev="1.2.17" force="true" conf="runtime->compile(*),runtime(*),master(*)">
+			<exclude org="com.sun.jdmk" module="jmxtools" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="com.sun.jmx" module="jmxri" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.mail" module="mail" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.jms" module="jmx" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.jms" module="jms" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.5" force="true" conf="runtime->compile(*),runtime(*),master(*)"/>
+		<dependency org="org.apache.hadoop" name="hadoop-minikdc" rev="2.6.0" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.5" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.apache.directory.server" name="apacheds-kerberos-codec" rev="2.0.0-M15" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.apache.directory.api" module="api-asn1-ber" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.apache.directory.api" module="api-i18n" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.apache.directory.api" module="api-ldap-model" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="net.sf.ehcache" module="ehcache-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.zookeeper" name="zookeeper" rev="3.4.6" force="true" conf="test->runtime(*),master(*)">
+			<exclude org="org.jboss.netty" module="netty" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.curator" name="curator-framework" rev="2.6.0" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.apache.curator" name="curator-test" rev="2.6.0" force="true" conf="test->runtime(*),master(*)"/>
+		<override org="com.cenqua.clover" module="clover" matcher="exact" rev="3.0.2"/>
+		<override org="jdiff" module="jdiff" matcher="exact" rev="1.0.9"/>
+		<override org="org.apache.hadoop" module="hadoop-assemblies" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-annotations" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-common" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-auth" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-nfs" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-hdfs" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-app" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-common" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-api" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-client" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-core" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-jobclient" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-shuffle" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server-web-proxy" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server-common" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server-tests" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-common" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-registry" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server-nodemanager" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-server-resourcemanager" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-yarn-applications-distributedshell" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-client-hs" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-mapreduce-examples" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-gridmix" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-streaming" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-archives" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-distcp" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-datajoin" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-rumen" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-extras" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-ant" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-client" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-minicluster" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-minikdc" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-openstack" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-aws" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.hadoop" module="hadoop-kms" matcher="exact" rev="2.6.0"/>
+		<override org="com.google.guava" module="guava" matcher="exact" rev="11.0.2"/>
+		<override org="com.google.code.gson" module="gson" matcher="exact" rev="2.2.4"/>
+		<override org="commons-cli" module="commons-cli" matcher="exact" rev="1.2"/>
+		<override org="org.apache.commons" module="commons-math3" matcher="exact" rev="3.1.1"/>
+		<override org="org.apache.commons" module="commons-compress" matcher="exact" rev="1.4.1"/>
+		<override org="xmlenc" module="xmlenc" matcher="exact" rev="0.52"/>
+		<override org="commons-httpclient" module="commons-httpclient" matcher="exact" rev="3.1"/>
+		<override org="org.apache.httpcomponents" module="httpclient" matcher="exact" rev="4.2.5"/>
+		<override org="org.apache.httpcomponents" module="httpcore" matcher="exact" rev="4.2.5"/>
+		<override org="commons-codec" module="commons-codec" matcher="exact" rev="1.4"/>
+		<override org="commons-net" module="commons-net" matcher="exact" rev="3.1"/>
+		<override org="javax.servlet" module="servlet-api" matcher="exact" rev="2.5"/>
+		<override org="org.mortbay.jetty" module="jetty" matcher="exact" rev="6.1.26"/>
+		<override org="org.mortbay.jetty" module="jetty-util" matcher="exact" rev="6.1.26"/>
+		<override org="org.apache.tomcat.embed" module="tomcat-embed-core" matcher="exact" rev="7.0.55"/>
+		<override org="org.apache.tomcat.embed" module="tomcat-embed-logging-juli" matcher="exact" rev="7.0.55"/>
+		<override org="javax.servlet.jsp" module="jsp-api" matcher="exact" rev="2.1"/>
+		<override org="org.glassfish" module="javax.servlet" matcher="exact" rev="3.1"/>
+		<override org="org.codehaus.plexus" module="plexus-utils" matcher="exact" rev="2.0.5"/>
+		<override org="org.codehaus.plexus" module="plexus-component-annotations" matcher="exact" rev="1.5.5"/>
+		<override org="asm" module="asm" matcher="exact" rev="3.2"/>
+		<override org="com.sun.jersey" module="jersey-core" matcher="exact" rev="1.9"/>
+		<override org="com.sun.jersey" module="jersey-json" matcher="exact" rev="1.9"/>
+		<override org="com.sun.jersey" module="jersey-server" matcher="exact" rev="1.9"/>
+		<override org="com.google.inject" module="guice" matcher="exact" rev="3.0"/>
+		<override org="cglib" module="cglib" matcher="exact" rev="2.2"/>
+		<override org="com.google.inject.extensions" module="guice-servlet" matcher="exact" rev="3.0"/>
+		<override org="com.sun.jersey.contribs" module="jersey-guice" matcher="exact" rev="1.9"/>
+		<override org="com.sun.jersey.jersey-test-framework" module="jersey-test-framework-core" matcher="exact" rev="1.9"/>
+		<override org="com.sun.jersey.jersey-test-framework" module="jersey-test-framework-grizzly2" matcher="exact" rev="1.9"/>
+		<override org="io.netty" module="netty" matcher="exact" rev="3.6.2.Final"/>
+		<override org="commons-io" module="commons-io" matcher="exact" rev="2.4"/>
+		<override org="org.mortbay.jetty" module="jetty-servlet-tester" matcher="exact" rev="6.1.26"/>
+		<override org="tomcat" module="jasper-compiler" matcher="exact" rev="5.5.23"/>
+		<override org="tomcat" module="jasper-runtime" matcher="exact" rev="5.5.23"/>
+		<override org="commons-el" module="commons-el" matcher="exact" rev="1.0"/>
+		<override org="commons-logging" module="commons-logging" matcher="exact" rev="1.1.3"/>
+		<override org="commons-logging" module="commons-logging-api" matcher="exact" rev="1.1"/>
+		<override org="log4j" module="log4j" matcher="exact" rev="1.2.17"/>
+		<override org="net.java.dev.jets3t" module="jets3t" matcher="exact" rev="0.9.0"/>
+		<override org="com.amazonaws" module="aws-java-sdk" matcher="exact" rev="1.7.4"/>
+		<override org="org.apache.mina" module="mina-core" matcher="exact" rev="2.0.0-M5"/>
+		<override org="org.apache.ftpserver" module="ftplet-api" matcher="exact" rev="1.0.0"/>
+		<override org="org.apache.ftpserver" module="ftpserver-core" matcher="exact" rev="1.0.0"/>
+		<override org="org.apache.ftpserver" module="ftpserver-deprecated" matcher="exact" rev="1.0.0-M2"/>
+		<override org="junit" module="junit" matcher="exact" rev="4.11"/>
+		<override org="commons-lang" module="commons-lang" matcher="exact" rev="2.6"/>
+		<override org="commons-collections" module="commons-collections" matcher="exact" rev="3.2.1"/>
+		<override org="commons-configuration" module="commons-configuration" matcher="exact" rev="1.6"/>
+		<override org="org.slf4j" module="slf4j-api" matcher="exact" rev="1.7.5"/>
+		<override org="org.slf4j" module="slf4j-log4j12" matcher="exact" rev="1.7.5"/>
+		<override org="org.slf4j" module="jul-to-slf4j" matcher="exact" rev="1.7.5"/>
+		<override org="org.eclipse.jdt" module="core" matcher="exact" rev="3.1.1"/>
+		<override org="oro" module="oro" matcher="exact" rev="2.0.8"/>
+		<override org="org.codehaus.jackson" module="jackson-mapper-asl" matcher="exact" rev="1.9.13"/>
+		<override org="org.codehaus.jackson" module="jackson-core-asl" matcher="exact" rev="1.9.13"/>
+		<override org="org.codehaus.jackson" module="jackson-jaxrs" matcher="exact" rev="1.9.13"/>
+		<override org="org.codehaus.jackson" module="jackson-xc" matcher="exact" rev="1.9.13"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-core" matcher="exact" rev="2.2.3"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-databind" matcher="exact" rev="2.2.3"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-annotations" matcher="exact" rev="2.2.3"/>
+		<override org="org.mockito" module="mockito-all" matcher="exact" rev="1.8.5"/>
+		<override org="org.apache.avro" module="avro" matcher="exact" rev="1.7.4"/>
+		<override org="net.sf.kosmosfs" module="kfs" matcher="exact" rev="0.3"/>
+		<override org="org.apache.ant" module="ant" matcher="exact" rev="1.8.1"/>
+		<override org="com.google.protobuf" module="protobuf-java" matcher="exact" rev="2.5.0"/>
+		<override org="commons-daemon" module="commons-daemon" matcher="exact" rev="1.0.13"/>
+		<override org="com.jcraft" module="jsch" matcher="exact" rev="0.1.42"/>
+		<override org="org.htrace" module="htrace-core" matcher="exact" rev="3.0.4"/>
+		<override org="org.jdom" module="jdom" matcher="exact" rev="1.1"/>
+		<override org="com.googlecode.json-simple" module="json-simple" matcher="exact" rev="1.1"/>
+		<override org="org.apache.zookeeper" module="zookeeper" matcher="exact" rev="3.4.6"/>
+		<override org="org.apache.bookkeeper" module="bookkeeper-server" matcher="exact" rev="4.2.3"/>
+		<override org="org.hsqldb" module="hsqldb" matcher="exact" rev="2.0.0"/>
+		<override org="com.codahale.metrics" module="metrics-core" matcher="exact" rev="3.0.1"/>
+		<override org="org.apache.hadoop" module="hadoop-sls" matcher="exact" rev="2.6.0"/>
+		<override org="com.google.code.findbugs" module="jsr305" matcher="exact" rev="1.3.9"/>
+		<override org="javax.xml.bind" module="jaxb-api" matcher="exact" rev="2.2.2"/>
+		<override org="org.codehaus.jettison" module="jettison" matcher="exact" rev="1.1"/>
+		<override org="com.sun.jersey" module="jersey-client" matcher="exact" rev="1.9"/>
+		<override org="org.glassfish.grizzly" module="grizzly-http-servlet" matcher="exact" rev="2.1.2"/>
+		<override org="org.fusesource.leveldbjni" module="leveldbjni-all" matcher="exact" rev="1.8"/>
+		<override org="org.apache.directory.server" module="apacheds-kerberos-codec" matcher="exact" rev="2.0.0-M15"/>
+		<override org="xerces" module="xercesImpl" matcher="exact" rev="2.9.1"/>
+		<override org="org.apache.curator" module="curator-framework" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-test" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-recipes" matcher="exact" rev="2.6.0"/>
+		<override org="org.apache.curator" module="curator-client" matcher="exact" rev="2.6.0"/>
+	</dependencies>
+</ivy-module>
