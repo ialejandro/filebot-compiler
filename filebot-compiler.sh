@@ -208,4 +208,5 @@ if [[ "${NEW_REV}" != "${LAST_REV}" ]]; then
 	exit 0
 else
 	echo "[${WARN}WARNING${NC}] This version has been compiled."
+	exit 2
 fi
