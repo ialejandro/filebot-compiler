@@ -13,12 +13,7 @@ The script installs all requirements (packages, dirs, compile-software, download
 4. Compile Filebot
 
 ## Execute
-```
-chmod +x filebot-compiler.sh
-bash filebot-compiler.sh 
-```
-or
-```
+```bash
 chmod +x filebot-compiler.sh
 ./filebot-compiler.sh
 ```
@@ -43,6 +38,16 @@ chmod +x filebot-compiler.sh
 
 ## Other information
 If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks) (***ONLY WORKS WITH JAVA9***). The latest version will automatically appear.
+
+### More easy...
+You can download the latest version with `wget` or `curl`
+```bash
+wget https://filebot.ialejandro.rocks/FileBot.jar
+```
+or
+```bash
+curl -s https://filebot.ialejandro.rocks/FileBot.jar -o FileBot.jar
+```
 
 ## Contributing
 I would be happy to upgrade the code, you are free to collaborate and improve my code. Thanks [@sbr481](https://github.com/sbr481) for you help.
