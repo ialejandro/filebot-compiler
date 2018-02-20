@@ -40,7 +40,7 @@ chmod +x filebot-compiler.sh
 If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks) (***ONLY WORKS WITH JAVA9***). The latest version will automatically appear.
 
 ### More easy...
-You can download the latest version with `wget` or `curl`
+You can download the latest version with `wget` or `curl`.
 ```bash
 wget https://filebot.ialejandro.rocks/FileBot.jar
 ```
