@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0">
-	<info organisation="net.filebot" module="filebot" revision="working@ant" status="integration" publication="20180216213618"/>
+	<info organisation="net.filebot" module="filebot" revision="working@ant" status="integration" publication="20180219175826"/>
 	<dependencies>
 		<!-- FileBot -->
 		<dependency rev="2.4.12" org="org.codehaus.groovy" name="groovy-all"/>
