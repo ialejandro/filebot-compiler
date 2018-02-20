@@ -33,7 +33,7 @@ chmod +x filebot-compiler.sh
 * **apache-ivy**: to download the dependencies of Filebot build
 
 ### Apache Ivy Cache
-I upload de apache-ivy cache. Often the dependencies are down and Apache Ivy can't download, you can download my cache from Github and create symbolic link to the home user compiles filebot. Like this:
+I upload Apache Ivy cache. Often the dependencies are down and Apache Ivy can't download, you can download my cache from Github and create symbolic link to the home user compiles filebot. Like this:
 
 ```bash
 ln -s <repo-local-dir>/.ivy2 ~/.ivy2
