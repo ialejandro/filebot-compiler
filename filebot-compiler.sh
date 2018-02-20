@@ -205,6 +205,7 @@ if [[ "${NEW_REV}" != "${LAST_REV}" ]]; then
 
 	# Save commit version
 	echo "${NEW_REV}" > "${FILEBOT_CONFIG}/commits_versions"
+	exit 0
 else
 	echo "[${WARN}WARNING${NC}] This version has been compiled."
 fi
