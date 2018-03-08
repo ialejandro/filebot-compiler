@@ -8,7 +8,7 @@
 
 		conf="default"
 		confs="default"
-		date="20180307121939"/>
+		date="20180308193553"/>
 	<dependencies>
 		<module organisation="org.sonatype.plexus" name="plexus-cipher">
 			<revision name="1.7" status="release" pubdate="20110726200634" resolver="public" artresolver="main" homepage="http://spice.sonatype.org/${project.artifactId}" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="179">
