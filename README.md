@@ -1,3 +1,6 @@
+## Important!
+If you want a stable version, check this repo: [Filebot - by Phoenix09](https://github.com/Phoenix09/filebot). I thinking change the idea of compile with a bash-script FileBot and move to CI (Continuous Integration) with Jenkins and only publish the stable versions like [@Phoenix09](https://github.com/Phoenix09).
+
 # Filebot Compiler
 Filebot Compiler is a simply script to compiler the latest version of [Filebot](https://github.com/filebot/) (by [@rednoah](https://github.com/rednoah)). 
 
