@@ -1,3 +1,10 @@
+**DEPRECATED PROJECT**: the project won't be continue developing because [@rednoah](https://github.com/rednoah) compile Filebot for all platform. If you want more info, please enter here:
+* More info about new versions: https://www.filebot.net/forums/viewtopic.php?f=6&t=6006
+* Buy license: https://www.filebot.net/purchase.html
+* Repository: https://get.filebot.net/filebot/
+
+Thanks you so much for follow the project! ♥
+
 ## Important!
 If you want a stable version, check this repo: [Filebot - by Phoenix09](https://github.com/Phoenix09/filebot). I thinking change the idea of compile with a bash-script FileBot and move to CI (Continuous Integration) with Jenkins and only publish the stable versions like [@Phoenix09](https://github.com/Phoenix09).
 
@@ -41,10 +48,6 @@ I upload Apache Ivy cache. Often the dependencies are down and Apache Ivy can't 
 ```bash
 ln -s <repo-local-dir>/.ivy2 ~/.ivy2
 ```
-
-## TODO
-- [ ] Menu
-- [ ] Trace log
 
 ## Other information
 If you wan't to compile, you can download in my website: [https://filebot.ialejandro.rocks](https://filebot.ialejandro.rocks) (***ONLY WORKS WITH JAVA9***). The latest version will automatically appear.
